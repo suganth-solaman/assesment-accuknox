@@ -17,6 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from signals_app.views import (
+    ProofSynchronousView,
+    ProofSameThreadView,
+    ProofSameTransactionView,
+    RectangleDemoView,
+)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('signals/proof-synchronous/', ProofSynchronousView.as_view()),
+    path('signals/proof-same-thread/', ProofSameThreadView.as_view()),
+    path('signals/proof-same-transaction/', ProofSameTransactionView.as_view()),
+    path('rectangle-demo/', RectangleDemoView.as_view()),
 ]
