@@ -9,3 +9,7 @@ class TransactionProofModel(models.Model):
 
 class TestModel(models.Models):
     created_by_signal = models.BooleanField(default=True)
+
+class AddistionalModel(models.Models):
+     name = models.CharField(max_length=100)
+    
