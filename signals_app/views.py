@@ -113,3 +113,7 @@ class RectangleDemoView(APIView):
         return Response({
             "collection": collection,
         })
+
+
+def function_testing():
+    return None
